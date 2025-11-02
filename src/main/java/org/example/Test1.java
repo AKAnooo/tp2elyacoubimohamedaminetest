@@ -18,7 +18,7 @@ public class Test1 {
                 .build();
 
         // Pose une question et affiche la réponse
-        String reponse = modele.chat("Quelle est la capitale du Maroc ?");
+        String reponse = modele.chat("Comment s'appelle le chat de Pierre");
         System.out.println("Réponse du modèle : " + reponse);
     }
 }
