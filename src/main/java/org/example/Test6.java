@@ -36,6 +36,7 @@ public class Test6 {
                 .apiKey(apiKey)
                 .modelName("gemini-2.5-flash")
                 .temperature(0.3)
+                .logRequestsAndResponses(true)   // 👈 active le logging complet des requêtes/réponses
                 .build();
 
         // -- Mémoire de conversation
