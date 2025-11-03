@@ -75,19 +75,18 @@ public class Test5 {
     private static void conversationAvec(Assistant assistant) {
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
-                System.out.println("==================================================");
-                System.out.println("Posez votre question (ou tapez 'fin' pour arrêter) : ");
+                System.out.println("Posez votre question (ou tapez '/' pour arrêter) : ");
                 String question = scanner.nextLine();
                 if (question == null || question.isBlank()) continue;
-                if ("fin".equalsIgnoreCase(question.trim())) {
+                if ("/".equalsIgnoreCase(question.trim())) {
                     System.out.println("Fin de la conversation");
                     break;
                 }
 
-                System.out.println("==================================================");
+
                 String reponse = assistant.chat(question);
                 System.out.println("Assistant : " + reponse);
-                System.out.println("==================================================");
+
             }
         }
     }
